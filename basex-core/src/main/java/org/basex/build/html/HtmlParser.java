@@ -153,6 +153,7 @@ public final class HtmlParser extends XMLParser {
       if(opts.contains(HtmlOptions.ENCODING))
         is.setEncoding(opts.get(HtmlOptions.ENCODING));
       // end TagSoup options
+      opt(writer, "encoding", Strings.UTF8);
 
       reader.setContentHandler((ContentHandler) writer);
       reader.parse(is);
